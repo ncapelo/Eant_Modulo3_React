@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Componentes con React Puro</title>
+    </head>
+    <body>
+        <h1>Componentes con React Puro</h1>
+
+        <div id="app">
+                
+        </div> 
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <script>
+            class Saludo extends React.Component {
+                render(){
+                    let etiqueta = React.createElement("blockquote", null, `Hola ${this.props.dia}`)
+
+                    return etiqueta
+                }
+            }
+
+            let app = document.querySelector("#app")
+            let dia1 = React.createElement(Saludo, { dia : "Martes" })
+            let dia2 = React.createElement(Saludo, { dia : "Jueves" })
+            let dia3 = React.createElement(Saludo, { dia : "Jueves" })
+
+            ReactDOM.render([dia1,dia2,dia3], app)
+
+        </script>
+    </body>    
+</html>
