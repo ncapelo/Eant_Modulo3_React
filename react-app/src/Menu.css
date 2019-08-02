@@ -1,0 +1,13 @@
+.Menu {
+  text-align: center;
+}
+
+.Menu-ul{
+  display: flex;
+}
+
+.Menu-li{
+  list-style: none;
+  float: left;
+  padding: 2%;
+}
